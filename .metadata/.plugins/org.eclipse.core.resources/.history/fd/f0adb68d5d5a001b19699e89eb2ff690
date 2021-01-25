@@ -1,0 +1,8 @@
+package JDBC;
+
+public class CriarBanco {
+	public static void main(String[] args) {
+		
+		final String url = "jdbc:mysql://localhost?verifyServerCertificate=false&useSSL=true";
+	}
+}
