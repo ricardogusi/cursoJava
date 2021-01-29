@@ -1,4 +1,4 @@
-package com.example.exerciciossb.controllers;
+package Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.exerciciossb.models.Produto;
-import com.example.exerciciossb.models.repositories.ProdutoRepository;
+import com.example.sbjpa.exerciciosbjpa.ProdutoRepository;
+
+import Model.Produto;
+
+
 
 
 @RestController
@@ -17,12 +20,12 @@ public class ProdutoController {
 	
 	
 	@Autowired
-	private ProdutoRepository produtoRepository;  //dando erro
+	private ProdutoRepository produtoRepository;  
 	
 	@PostMapping
 	public @ResponseBody Produto novoProduto(@RequestParam  String nome) {
 		Produto produto = new Produto(nome);
-		produtoRepository.save(produto);   //dando erro 
+		produtoRepository.save(produto);    
 		return produto;
 		
 	}
