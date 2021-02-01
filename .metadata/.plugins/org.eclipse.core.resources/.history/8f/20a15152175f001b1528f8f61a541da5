@@ -1,6 +1,0 @@
-package modelo.consulta;
-
-public class NotaFilme {
-
-	private double media;
-}
